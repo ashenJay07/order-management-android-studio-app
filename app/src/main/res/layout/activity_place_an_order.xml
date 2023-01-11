@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:layout_editor_absoluteX="1dp"
+    tools:layout_editor_absoluteY="71dp"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#EEEEEE"
+        tools:context=".OrderMgmtLogin">
+
+        <EditText
+            android:id="@+id/siteName_ui"
+            android:layout_width="0dp"
+            android:layout_height="68dp"
+            android:layout_marginLeft="50px"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="50px"
+            android:ems="10"
+            android:hint="Site Name"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.421"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/unitPrice_ui" />
+
+        <EditText
+            android:id="@+id/material_ui"
+            android:layout_width="0dp"
+            android:layout_height="68dp"
+            android:layout_marginLeft="50px"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="50px"
+            android:ems="10"
+            android:hint="Material"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.578"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+
+        <EditText
+            android:id="@+id/quantity_ui"
+            android:layout_width="0dp"
+            android:layout_height="68dp"
+            android:layout_marginLeft="50px"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="50px"
+            android:ems="10"
+            android:hint="Quantity"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.494"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/material_ui" />
+
+        <EditText
+            android:id="@+id/unitPrice_ui"
+            android:layout_width="0dp"
+            android:layout_height="68dp"
+            android:layout_marginLeft="50px"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="50px"
+            android:ems="10"
+            android:hint="Purchase Unit Price"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.578"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/quantity_ui" />
+
+        <EditText
+            android:id="@+id/siteAddress_ui"
+            android:layout_width="0dp"
+            android:layout_height="68dp"
+            android:layout_marginLeft="50px"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="50px"
+            android:ems="10"
+            android:hint="Site Address"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.494"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/siteName_ui" />
+
+        <EditText
+            android:id="@+id/deliveryDate_ui"
+            android:layout_width="0dp"
+            android:layout_height="68dp"
+            android:layout_marginLeft="50px"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="50px"
+            android:ems="10"
+            android:hint="Delivery Date (DD-MM-YYYY)"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.494"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/siteAddress_ui" />
+
+        <Button
+            android:id="@+id/placeOrderBtn"
+            android:layout_width="0dp"
+            android:layout_height="58dp"
+            android:layout_marginLeft="50px"
+            android:layout_marginTop="80dp"
+            android:layout_marginRight="50px"
+            android:onClick="insert_Data"
+            android:text="PLACE AN ORDER"
+            android:background="#00C853"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/deliveryDate_ui" />
+
+        <Button
+            android:id="@+id/viewOrderBtn"
+            android:layout_width="0dp"
+            android:layout_height="58dp"
+            android:layout_marginLeft="50px"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="50px"
+            android:layout_marginBottom="70px"
+            android:onClick="view_Data"
+            android:text="VIEW PLACED ORDERS"
+            android:background="#3F51B5"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/placeOrderBtn" />
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="wrap_content"
+            android:layout_height="350px"
+            android:paddingLeft="80px"
+            android:paddingRight="80px"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/placeorderimg" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
+
+
